@@ -3,7 +3,7 @@
 const express = require('express');
 const cors = require('cors');
 const swaggerUi = require('swagger-ui-express');
-const swaggerSpec = require('../docs/swagger');
+const swaggerSpec = require('../swaggerdoc/swagger');
 const db = require('./models');
 
 // --- IMPORT ROUTERS ---
