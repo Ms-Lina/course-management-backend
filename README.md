@@ -5,7 +5,7 @@ This repository contains the backend service for a multi-feature Course Manageme
 ## Live Demo & Walkthrough
 
 - **Video Walkthrough:** **https://drive.google.com/file/d/1rNHJlcip93heMVocKheytAT2ENvR3U4l/view?usp=sharing**
-- **Hosted i18n Frontend:** **[PASTE YOUR GITHUB PAGES LINK HERE]**
+- **Hosted i18n Frontend:** **https://ms-lina.github.io/course-management-backend/**
 
 ---
 
