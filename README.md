@@ -4,8 +4,8 @@ This repository contains the backend service for a multi-feature Course Manageme
 
 ## Live Demo & Walkthrough
 
-- **Video Walkthrough:** **[PASTE YOUR 5-MINUTE VIDEO LINK HERE]**
-- **Hosted i18n Frontend:** **[PASTE YOUR GITHUB PAGES LINK HERE]**
+- **Video Walkthrough:** **https://drive.google.com/file/d/1rNHJlcip93heMVocKheytAT2ENvR3U4l/view?usp=sharing**
+- **Hosted i18n Frontend:** **https://ms-lina.github.io/course-management-backend/**
 
 ---
 
@@ -55,7 +55,7 @@ Follow these steps to set up the project locally.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/Ms-Lina/course-management-backend.git
 cd course-management-backend
 ```
 
