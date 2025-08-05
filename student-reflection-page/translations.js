@@ -1,20 +1,26 @@
+// student-reflection-page/translations.js - UPDATED
+
 const translations = {
-    en: {
-        title: "My Course Reflection",
-        greeting: "Welcome to My Reflection Page",
-        prompt1: "What did you enjoy most about this course?",
-        prompt2: "What was the most challenging part?",
-        prompt3: "What is one thing you learned that you will use in the future?",
-        lang_en: "English",
-        lang_fr: "Français"
-    },
-    fr: {
-        title: "Ma Réflexion sur le Cours",
-        greeting: "Bienvenue sur Ma Page de Réflexion",
-        prompt1: "Qu'est-ce que vous avez le plus apprécié dans ce cours ?",
-        prompt2: "Quelle a été la partie la plus difficile ?",
-        prompt3: "Quelle est la chose que vous avez apprise et que vous utiliserez à l'avenir ?",
-        lang_en: "English",
-        lang_fr: "Français"
-    }
+  en: {
+    title: "My Course Reflection",
+    greeting: "Welcome",
+    prompt1: "Prompt 1",
+    prompt2: "Prompt 2",
+    prompt3: "Prompt 3",
+    lang_en: "English",
+    lang_fr: "Français",
+    // Add new keys for the placeholders
+    placeholder: "Your thoughts here..." 
+  },
+  fr: {
+    title: "Ma Réflexion sur le Cours",
+    greeting: "Bienvenue",
+    prompt1: "Question 1",
+    prompt2: "Question 2",
+    prompt3: "Question 3",
+    lang_en: "Anglais",
+    lang_fr: "Français",
+    // Add the French translation for the placeholders
+    placeholder: "Vos pensées ici..."
+  }
 };

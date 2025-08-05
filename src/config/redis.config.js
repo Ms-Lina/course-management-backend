@@ -1,15 +1,20 @@
-const { Sequelize } = require('sequelize');
+// src/config/redis.config.js
+
+const Redis = require('ioredis');
 require('dotenv').config();
 
-const sequelize = new Sequelize(
-  process.env.DB_NAME,
-  process.env.DB_USER,
-  process.env.DB_PASSWORD,
-  {
-    host: process.env.DB_HOST,
-    dialect: 'mysql',
-    logging: false,
-  }
-);
+if (!process.env.UPSTASH_REDIS_URL) {
+  throw new Error("FATAL ERROR: UPSTASH_REDIS_URL is not defined in .env file.");
+}
 
-module.exports = sequelize;
+const redisClient = new Redis(process.env.UPSTASH_REDIS_URL);
+
+redisClient.on('connect', () => {
+    console.log('[Redis] Client connected to Upstash Redis successfully.');
+});
+
+redisClient.on('error', (err) => {
+    console.error('[Redis] Client connection error:', err);
+});
+
+module.exports = redisClient;

@@ -1,15 +1,18 @@
+// src/config/db.config.js
+
 const { Sequelize } = require('sequelize');
 require('dotenv').config();
 
-const sequelize = new Sequelize(
-  process.env.DB_NAME,
-  process.env.DB_USER,
-  process.env.DB_PASSWORD,
-  {
-    host: process.env.DB_HOST,
-    dialect: 'mysql',
-    logging: false,
-  }
-);
+if (!process.env.DATABASE_URL) {
+  throw new Error('FATAL ERROR: DATABASE_URL is not set in the .env file.');
+}
+
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
+  dialect: 'mysql',
+  dialectOptions: {
+    ssl: { require: true, rejectUnauthorized: false }
+  },
+  logging: false,
+});
 
 module.exports = sequelize;

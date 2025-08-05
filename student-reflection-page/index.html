@@ -1,3 +1,5 @@
+<!-- student-reflection-page/index.html - UPDATED -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,26 +13,29 @@
         <header>
             <h1 data-key="title">My Course Reflection</h1>
             <nav id="language-switcher">
-                <button data-lang="en" data-key="lang_en">English</button>
+                <button data-lang="en" class="active" data-key="lang_en">English</button>
                 <button data-lang="fr" data-key="lang_fr">Français</button>
             </nav>
         </header>
+
         <main>
             <h2 data-key="greeting">Welcome</h2>
             <div class="question">
                 <h3 data-key="prompt1">Prompt 1</h3>
-                <textarea></textarea>
+                <!-- Add a data-placeholder-key attribute to each textarea -->
+                <textarea data-placeholder-key="placeholder" placeholder="Your thoughts here..."></textarea>
             </div>
             <div class="question">
                 <h3 data-key="prompt2">Prompt 2</h3>
-                <textarea></textarea>
+                <textarea data-placeholder-key="placeholder" placeholder="Your thoughts here..."></textarea>
             </div>
             <div class="question">
                 <h3 data-key="prompt3">Prompt 3</h3>
-                <textarea></textarea>
+                <textarea data-placeholder-key="placeholder" placeholder="Your thoughts here..."></textarea>
             </div>
         </main>
     </div>
+
     <script src="translations.js"></script>
     <script src="index.js"></script>
 </body>
