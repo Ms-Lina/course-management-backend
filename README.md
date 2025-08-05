@@ -4,7 +4,7 @@ This repository contains the backend service for a multi-feature Course Manageme
 
 ## Live Demo & Walkthrough
 
-- **Video Walkthrough:** **[PASTE YOUR 5-MINUTE VIDEO LINK HERE]**
+- **Video Walkthrough:** **https://drive.google.com/file/d/1rNHJlcip93heMVocKheytAT2ENvR3U4l/view?usp=sharing**
 - **Hosted i18n Frontend:** **[PASTE YOUR GITHUB PAGES LINK HERE]**
 
 ---
