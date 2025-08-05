@@ -14,7 +14,7 @@ const upload = require('../../middleware/file-upload.middleware');
  *   description: Facilitator Activity Tracker (FAT) management
  */
 
-// --- Routes for the main collection ---
+// --- Routes for the main collection (/api/activity-logs) ---
 router.route('/')
     /**
      * @swagger
@@ -30,9 +30,15 @@ router.route('/')
      *         multipart/form-data:
      *           schema:
      *             type: object
+     *             required: [allocationId, weekNumber, attendance]
      *             properties:
      *               allocationId: { type: 'integer' }
      *               weekNumber: { type: 'integer' }
+     *               attendance:
+     *                 type: string
+     *                 description: A JSON array of booleans, sent as a string.
+     *                 example: '[true, true, false]'
+     *               formativeOneGrading: { type: 'string', enum: [Done, Pending, Not Started] }
      *               logFile: { type: 'string', format: 'binary' }
      *     responses:
      *       '201':
@@ -53,7 +59,7 @@ router.route('/')
      */
     .get(protect, authorize('Manager'), ctrl.getLogs);
 
-// --- NEW: Routes for a specific item ---
+// --- Routes for a specific item by ID (/api/activity-logs/:id) ---
 router.route('/:id')
     /**
      * @swagger
@@ -71,13 +77,13 @@ router.route('/:id')
      *         schema:
      *           type: integer
      *     requestBody:
-     *       required: true
      *       content:
      *         multipart/form-data:
      *           schema:
      *             type: object
      *             properties:
-     *               formativeOneGrading: { type: 'string', enum: [Done, Pending, Not Started] }
+     *               weekNumber: { type: 'integer' }
+     *               attendance: { type: 'string', example: '[true, false, true]' }
      *               logFile: { type: 'string', format: 'binary' }
      *     responses:
      *       '200':
@@ -85,7 +91,7 @@ router.route('/:id')
      *       '404':
      *         description: Log not found or user is not authorized.
      */
-    .put(protect, authorize('Facilitator'), upload, ctrl.updateLog) // Note: No validation rules on update for flexibility
+    .put(protect, authorize('Facilitator'), upload, ctrl.updateLog)
     /**
      * @swagger
      * /api/activity-logs/{id}:
