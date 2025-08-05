@@ -118,3 +118,5 @@ Once the server is running, a complete and interactive API documentation is avai
 2. Use the `POST /api/auth/login` endpoint with a user's credentials to receive a JWT token.
 3. Click the **Authorize** button in the Swagger UI, type `Bearer ` (with a space), and paste the token.
 4. You can now access the protected (padlocked) endpoints corresponding to that user's role.
+
+Author:Lina Iratwe
