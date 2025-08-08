@@ -1,4 +1,4 @@
-# Course Management Platform - Backend Service
+# Course Management Platform
 
 This repository contains the backend service for a multi-feature Course Management Platform. The system is designed to support academic institutions by managing course allocations, tracking facilitator activities, and providing a secure, role-based API for all operations. This project fulfills the requirements of the summative assessment, demonstrating proficiency in Node.js, Express, Sequelize, MySQL, Redis, and RESTful API design.
 
